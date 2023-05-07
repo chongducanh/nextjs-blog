@@ -1,6 +1,8 @@
 import { createClient } from "next-sanity";
 import Link from "next/link";
-export default function IndexPage({ post }) {
+import styles from  '../styles/Blog.module.css';
+
+export default function Home({ post }) {
   return (
     <>
       <header>
@@ -26,7 +28,7 @@ export default function IndexPage({ post }) {
           </div>
         )}
 
-        <Link href="/blog">See blog here</Link>
+        <Link className={styles.link} href="/blog">See blog here</Link>
       </main>
     </>
   );

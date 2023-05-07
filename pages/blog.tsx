@@ -9,6 +9,7 @@ import {
   import { useRouter } from 'next/router';
   import { PLASMIC } from './plasmic-init';
   import Link from 'next/link';
+  import styles from  '../styles/Blog.module.css';
   
   // Statically fetch the data needed to render Plasmic pages or components.
   export const getStaticProps = async () => {
@@ -52,6 +53,7 @@ import {
         pageQuery={router.query}
       >
         <PlasmicComponent component={compMeta.displayName} />
+        <Link className={styles.link} href="/">Return to Homepage</Link>
       </PlasmicRootProvider>
     );
   }
