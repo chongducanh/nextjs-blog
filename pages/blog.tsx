@@ -14,7 +14,7 @@ import {
   // Statically fetch the data needed to render Plasmic pages or components.
   export const getStaticProps = async () => {
     // You can pass in multiple page paths or component names.
-    const plasmicData = await PLASMIC.fetchComponentData('Homepage');
+    const plasmicData = await PLASMIC.fetchComponentData('Blog');
     if (!plasmicData) {
       throw new Error('No Plasmic design found');
     }
